@@ -22,6 +22,7 @@ public class Student {
 	private String dept;
 	private String city;
 	private String state;
+	private int salary;
 	
 	public Student() {
 		// TODO Auto-generated constructor stub
@@ -43,7 +44,7 @@ public class Student {
 
 
 	public Student(int id, String first_name, String last_name,int age, String email, String password, String location,
-			String dept, String city, String state) {
+			String dept, String city, String state,int salary) {
 		super();
 		this.id = id;
 		this.first_name = first_name;
@@ -55,6 +56,7 @@ public class Student {
 		this.dept = dept;
 		this.city = city;
 		this.state = state;
+		this.salary = salary;
 	}
 
 
@@ -141,11 +143,21 @@ public class Student {
 	}
 
 
+	public int getSalary() {
+		return salary;
+	}
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+
 	@Override
 	public String toString() {
 		return "Student [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", age=" + age
 				+ ", email=" + email + ", password=" + password + ", location=" + location + ", dept=" + dept
-				+ ", city=" + city + ", state=" + state + "]";
+				+ ", city=" + city + ", state=" + state + ", salary=" + salary + "]";
 	}
 	
 	

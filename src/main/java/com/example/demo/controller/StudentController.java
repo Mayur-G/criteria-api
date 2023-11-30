@@ -71,4 +71,10 @@ public class StudentController {
 	{	
 		studentService.getStudent8();
 	}
+	
+	@GetMapping(path="/student9",produces = APPLICATION_JSON_VALUE)
+	public void listOfStudent9()
+	{	
+		studentService.getStudent9();
+	}
 }

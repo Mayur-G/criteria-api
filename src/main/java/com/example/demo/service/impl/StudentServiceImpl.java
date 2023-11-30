@@ -172,4 +172,21 @@ public class StudentServiceImpl implements StudentService{
 		System.out.println(resultList);
 	}
 
+	//2nd highest salary 
+	@Override
+	public void getStudent9() {
+		Session session = sessionFactory.openSession();
+		CriteriaBuilder cb = session.getCriteriaBuilder();
+		CriteriaQuery<Student> cq = cb.createQuery(Student.class);
+		Root<Student> root = cq.from(Student.class);
+		cq.orderBy(cb.desc(root.get("salary")));
+		
+		TypedQuery<Student> tq = entityManager.createQuery(cq);
+		List<Student> resultList = tq.setFirstResult(1).setMaxResults(1).getResultList();
+		for(Student student : resultList) {
+		System.out.println(student);		
+		}
+		
+	}
+
 }

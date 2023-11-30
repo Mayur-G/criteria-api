@@ -11,4 +11,5 @@ public interface StudentService {
 	public void getStudent6();
 	public void getStudent7();
 	public void getStudent8();
+	public void getStudent9();
 }
